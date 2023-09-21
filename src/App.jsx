@@ -1,12 +1,14 @@
-import "./App.css";
-import dataMock from "./mocks/data-response.json";
+import './App.css';
+import dataMock from './mocks/data-response.json';
 
 function App() {
   const data = dataMock.data;
   return (
     <div className="page">
-      <main>
+      <header>
         <h1>Anime List</h1>
+      </header>
+      <main>
         <ul className="animes">
           {data.map((anime) => (
             <li className="anime" key={anime.mal_id}>
