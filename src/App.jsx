@@ -4,20 +4,20 @@ import dataMock from "./mocks/data-response.json";
 function App() {
   const data = dataMock.data;
   return (
-    <>
+    <div className="page">
       <main>
         <h1>Anime List</h1>
-        {data.map((anime) => {
-          return (
-            <div key={anime.mal_id}>
+        <ul className="animes">
+          {data.map((anime) => (
+            <li className="anime" key={anime.mal_id}>
               <h3>{anime.title}</h3>
               <img src={anime.images.jpg.image_url} />
               <p>{anime.synopsis}</p>
-            </div>
-          );
-        })}
+            </li>
+          ))}
+        </ul>
       </main>
-    </>
+    </div>
   );
 }
 
