@@ -1,9 +1,7 @@
 import './App.css';
 import Animes from './components/Animes';
-import { getAllAnimes } from './services/animes';
 
 function App() {
-  getAllAnimes();
   return (
     <div className="page">
       <header>

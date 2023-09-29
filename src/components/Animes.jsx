@@ -1,21 +1,4 @@
-import { useEffect, useState } from 'react';
-import { getAllAnimes } from '../services/animes';
-
-function useAnimes() {
-  const [animes, setAnimes] = useState([]);
-
-  const getAnimes = async () => {
-    const data = await getAllAnimes();
-    setAnimes(data);
-  };
-
-  useEffect(() => {
-    getAnimes();
-  }, []);
-
-  console.log(animes);
-  return { data: animes };
-}
+import { useAnimes } from '../hooks/useAnimes';
 
 const ListOfAnimes = () => {
   const { data } = useAnimes();
