@@ -32,3 +32,9 @@
   border-radius: 8px;
   margin-top: 16px;
 }
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
